@@ -16,20 +16,17 @@ class Student:
         else:
             return 'Ошибка'
 
-
 class Mentor:
     def __init__(self, name, surname):
         self.name = name
         self.surname = surname
         self.courses_attached = ['Python', 'Git']
 
-
 class Lecturer(Mentor):
     def __init__(self, name, surname):
         super().__init__(name, surname)
         self.lecture_courses = []
         self.lecture_grades = {}
-
 
 class Reviewer(Mentor):
     def rate_hw(self, student, course, grade):
@@ -40,7 +37,6 @@ class Reviewer(Mentor):
                 student.grades[course] = grade
         else:
             return 'Ошибка'
-
 
 student_1 = Student('Ivan', 'Petrov', 'your_gender')
 student_1.courses_in_progress += ['Python', 'Git']
